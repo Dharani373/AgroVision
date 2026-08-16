@@ -39,3 +39,24 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Python
+ml/venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML models
+ml/models/*.pkl
+ml/models/*.joblib
+ml/models/*.pt
+ml/models/*.onnx
+
+# Dataset files
+ml/data/raw/
+ml/data/processed/
+
+# Environment
+.env

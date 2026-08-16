@@ -1,0 +1,13 @@
+{
+  "Crop": "Rice",
+  "Crop_Year": 2026,
+  "Season": "Kharif",
+  "State": "Telangana",
+  "Area": 10000,
+  "Annual_Rainfall": 1200,
+  "Fertilizer": 500000,
+  "Pesticide": 5000,
+  "Avg_Temperature": 26,
+  "Max_Temperature": 35,
+  "Min_Temperature": 18
+}
