@@ -9,16 +9,19 @@ function Home() {
       <nav className="border-b border-gray-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* AgroVision logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-600 text-xl">
-              🌱
+          <div className="flex flex-col items-center mb-8">
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="AgroVision Logo"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+
+              <h1 className="text-2xl font-bold text-green-700 tracking-tight">
+                AgroVision
+              </h1>
             </div>
-
-            <span className="text-2xl font-bold text-green-700">
-              AgroVision
-            </span>
-          </Link>
-
+          </div>
           {/* Navigation links */}
           <div className="hidden items-center gap-8 md:flex">
             <a
