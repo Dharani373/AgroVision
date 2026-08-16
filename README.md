@@ -20,7 +20,7 @@ AgroVision is a full-stack Machine Learning + MERN application designed to help 
 
 - `client` - React frontend
 - `server` - Node.js + Express backend
-- `ml-service` - Python + FastAPI ML service
+- `ml` - Python + FastAPI ML service
 - `docs` - Project documentation
 
 ## Status
