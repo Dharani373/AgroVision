@@ -1,15 +1,25 @@
 const { predictYield } = require("../services/mlPredictionService");
+const Prediction = require("../models/Prediction");
 
 // Handles crop yield prediction requests
 const predictCropYield = async (req, res) => {
   try {
-    // Get prediction from the Python ML service
+    // Run the ML model
     const result = await predictYield(req.body);
 
-    // Return the prediction to the frontend
-    res.status(200).json(result);
+    // Save prediction to MongoDB
+    const prediction = await Prediction.create({
+      user: req.user.id,
+      input: req.body,
+      predictedYield: result.predicted_yield,
+    });
+
+    res.status(200).json({
+      success: true,
+      predicted_yield: result.predicted_yield,
+      predictionId: prediction._id,
+    });
   } catch (error) {
-    // Print the complete error
     console.error("========== ML ERROR ==========");
     console.error(error);
     console.error("Error message:", error.message);

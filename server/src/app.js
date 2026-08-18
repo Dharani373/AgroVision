@@ -8,6 +8,7 @@ const farmRoutes = require("./routes/farmRoutes");
 const cropRoutes = require("./routes/cropRoutes");
 const app = express();
 const predictionRoutes = require("./routes/predictionRoutes");
+const dashboardRoutes = require("./routes/dashboardRoutes");
 
 app.use(cors());
 app.use(helmet());
@@ -25,4 +26,5 @@ app.use("/api/auth", authRoutes);
 app.use("/api/farms", farmRoutes);
 app.use("/api/crops", cropRoutes);
 app.use("/api/predictions", predictionRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 module.exports = app;
