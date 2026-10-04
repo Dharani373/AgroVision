@@ -32,6 +32,30 @@ const predictCropYield = async (req, res) => {
   }
 };
 
+// Get prediction history for the logged-in farmer
+const getPredictionHistory = async (req, res) => {
+  try {
+    const predictions = await Prediction.find({
+      user: req.user.id,
+    }).sort({ createdAt: -1 });
+
+    res.status(200).json({
+      success: true,
+      predictions,
+    });
+  } catch (error) {
+    console.error("========== HISTORY ERROR ==========");
+    console.error(error);
+    console.error("===================================");
+
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   predictCropYield,
+  getPredictionHistory,
 };

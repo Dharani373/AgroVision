@@ -5,6 +5,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import MyFarms from "./pages/MyFarms";
+import Prediction from "./pages/Prediction";
+import PredictionHistory from "./pages/PredictionHistory";
+import Profile from "./pages/Profile";
+import AgriculturalInsights from "./pages/AgriculturalInsights";
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/farms" element={<MyFarms />} />
+      <Route path="/prediction" element={<Prediction />} />
+      <Route path="/prediction-history" element={<PredictionHistory />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/insights" element={<AgriculturalInsights />} />
     </Routes>
   );
 }
